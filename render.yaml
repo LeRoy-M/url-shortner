@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: url-shortner
+    runtime: python
+    region: oregon
+
+    # Build: install Node deps, build React, then install Python deps
+    buildCommand: |
+      cd frontend && npm ci && npm run build && cd ..
+      pip install uv
+      uv sync --frozen
+
+    # Start the FastAPI app; Render injects $PORT automatically
+    startCommand: uv run uvicorn url_shortner:app --host 0.0.0.0 --port $PORT
+
+    envVars:
+      - key: ENV
+        value: production
+      # Set BASE_URL to your Render service URL so short links resolve correctly.
+      # Example: https://url-shortner.onrender.com
+      - key: BASE_URL
+        sync: false   # fill in manually in the Render dashboard
+      - key: PYTHON_VERSION
+        value: "3.14"

@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+/* Enable class-based dark mode (Tailwind v4) */
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* MUI-style blue primary */
+  --color-primary-50:  hsl(210 100% 97%);
+  --color-primary-100: hsl(210  92% 90%);
+  --color-primary-200: hsl(213  93% 82%);
+  --color-primary-300: hsl(215  84% 70%);
+  --color-primary-400: hsl(217  80% 62%);
+  --color-primary-500: hsl(217  89% 55%);
+  --color-primary-600: hsl(221  83% 48%);
+  --color-primary-700: hsl(224  76% 40%);
+  --color-primary-800: hsl(226  70% 33%);
+  --color-primary-900: hsl(228  64% 24%);
+
+  /* Blue-tinted neutral grays (light) */
+  --color-neutral-50:  hsl(220  60% 99%);
+  --color-neutral-100: hsl(220  30% 96%);
+  --color-neutral-200: hsl(220  25% 90%);
+  --color-neutral-300: hsl(220  20% 80%);
+  --color-neutral-400: hsl(220  15% 65%);
+  --color-neutral-500: hsl(220  10% 50%);
+  --color-neutral-600: hsl(220  12% 38%);
+  --color-neutral-700: hsl(220  14% 28%);
+  --color-neutral-800: hsl(220  16% 18%);
+  --color-neutral-900: hsl(220  20% 10%);
+
+  --color-error-main: hsl(0 72% 51%);
+
+  --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  /* MUI-style card shadow */
+  --shadow-card:
+    0 5px 15px 0   hsla(220, 30%,  5%, 0.05),
+    0 15px 35px -5px hsla(220, 25%, 10%, 0.05);
+  --shadow-card-dark:
+    0 5px 15px 0   hsla(220, 30%,  5%, 0.5),
+    0 15px 35px -5px hsla(220, 25%, 10%, 0.08);
+}
+
+/* ── Base ─────────────────────────────────────────────────────────────── */
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

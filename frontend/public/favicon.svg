@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <!-- rounded square background -->
+  <rect width="32" height="32" rx="8" fill="#1d63ed"/>
+  <!-- link / chain icon (same shape as the in-app LinkIcon) in white -->
+  <path
+    d="M13 17a5 5 0 0 0 7.07.36l2.83-2.83a5 5 0 0 0-7.07-7.07l-1.42 1.41"
+    stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path
+    d="M19 15a5 5 0 0 0-7.07-.36L9.1 17.47a5 5 0 0 0 7.07 7.07l1.41-1.41"
+    stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
